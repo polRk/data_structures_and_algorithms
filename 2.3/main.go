@@ -42,7 +42,7 @@ func (g Graph) Dijkstra() Graph {
 
 			// Прохожусь по всем столбцам
 			for j := 0; j < n; j++ {
-				if visited[j] == false && weights[k][j] < min {
+				if !visited[j] && weights[k][j] < min {
 					current = j
 					min = weights[k][j]
 				}
@@ -54,7 +54,7 @@ func (g Graph) Dijkstra() Graph {
 
 			// Прохожусь по всем столбцам
 			for j := 0; j < n; j++ {
-				if visited[j] == false {
+				if !visited[j] {
 					weights[k][j] = math.Min(weights[k][j], weights[k][current]+weights[current][j])
 				}
 			}
