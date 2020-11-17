@@ -1,4 +1,5 @@
 .idea/
+.DS_Store/
 bin/
-.zip
-.pdf
+*.zip
+*.pdf
