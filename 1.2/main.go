@@ -50,7 +50,7 @@ func (s *Stack) Push(value rune) {
 	s.top = n
 }
 
-// Reverse вовзращает обращенную строку.
+// Reverse возвращает обращенную строку.
 func Reverse(in string) (out string) {
 	for _, r := range in {
 		if r == '(' {

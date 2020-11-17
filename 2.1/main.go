@@ -159,7 +159,6 @@ func readOp(t *Tree) error {
 		}
 
 		fmt.Println("Добавлены элементы:", keys)
-		break
 	case "p":
 		fmt.Print("Прямой порядок: ")
 		t.DisplayPreOrder()
@@ -174,8 +173,6 @@ func readOp(t *Tree) error {
 		fmt.Println()
 
 		fmt.Println()
-
-		break
 	default:
 		if err := readOp(t); err != nil {
 			return err

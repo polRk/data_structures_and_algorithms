@@ -396,8 +396,6 @@ func readOp(t *Tree) error {
 		} else {
 			fmt.Println("Ничего не найдено.")
 		}
-
-		break
 	case "a":
 		fmt.Print("Введите числа, разделенные пробелом: ")
 		v, err := readValue()
@@ -417,10 +415,8 @@ func readOp(t *Tree) error {
 		}
 
 		fmt.Println("Добавлены элементы:", keys)
-		break
 	case "p":
 		t.Display()
-		break
 	default:
 		if err := readOp(t); err != nil {
 			return err

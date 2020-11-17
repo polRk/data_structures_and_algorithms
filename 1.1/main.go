@@ -235,8 +235,6 @@ func readOp(t *Segment) error {
 		} else {
 			fmt.Println("Ничего не найдено.")
 		}
-
-		break
 	case "a":
 		fmt.Print("Введите строку: ")
 		v, err := readValue()
@@ -247,7 +245,6 @@ func readOp(t *Segment) error {
 		t.PushForward(v)
 
 		fmt.Println("Добавлен элемент: ", v)
-		break
 	case "d":
 		fmt.Print("Введите строку: ")
 		v, err := readValue()
@@ -257,11 +254,8 @@ func readOp(t *Segment) error {
 
 		t.Delete(v)
 		fmt.Println("Удален элемент: ", v)
-
-		break
 	case "p":
 		t.head.Print()
-		break
 	default:
 		if err := readOp(t); err != nil {
 			return err
